@@ -57,11 +57,6 @@ graph TD
    ```
 
 
-## 📚 Documentation
-
-- [Guide utilisateur](docs/user-guide.md)
-- [API des Servlets](docs/api-reference.md)
-- [Schéma de base](docs/database-schema.pdf)
 
 ## 📄 Licence
 
