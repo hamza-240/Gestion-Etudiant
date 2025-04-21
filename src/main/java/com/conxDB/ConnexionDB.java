@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2023 Votre Nom
+ * MIT License
+ */
 package com.conxDB;
 
 import io.github.cdimascio.dotenv.Dotenv;

@@ -17,12 +17,19 @@
         <junit.version>5.11.0</junit.version>
     </properties>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
+
         <dependency>
             <groupId>io.github.cdimascio</groupId>
             <artifactId>java-dotenv</artifactId>
@@ -51,7 +58,31 @@
     </dependencies>
 
     <build>
-        <plugins>
+
+            <plugins>
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>4.2</version>
+                    <configuration>
+                        <header>LICENSE_HEADER</header>
+                        <includes>
+                            <include>**/*.java</include>
+                            <include>**/*.jsp</include>
+                            <include>**/*.js</include>
+                        </includes>
+                        <excludes>
+                            <exclude>**/target/**</exclude>
+                        </excludes>
+                        <mapping>
+                            <java>SLASHSTAR_STYLE</java>
+                            <jsp>JAVADOC_STYLE</jsp>
+                        </mapping>
+                    </configuration>
+                </plugin>
+
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
